@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Crypto Crisis</title>
+    <link rel="icon" href="C:\Users\Jos9\OneDrive\Desktop\project\bitcoin.png">
+    <!-- Link to external CSS with version parameter -->
+    <link rel="stylesheet" href="styles.css?v=1.0.2">
+</head>
+<body>
+    <!-- Canvas for Matrix Effect -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="C:\Users\Jos9\OneDrive\Desktop\project\audio.mp3" loop></audio>
+
+    <!-- Volume Toggle Button -->
+    <button id="volumeBtn" class="volume-btn" aria-label="Toggle Volume" title="Toggle Background Music">
+        <img src="https://www.freeiconspng.com/uploads/audio-sound-speaker-volume-icon-7.png" >
+    </button>
+
+    <!-- Main Container for Logo and Links -->
+    <div id="container">
+        <!-- Centered Logo with Glitch Effect -->
+        <div id="logo" class="glitch-effect">THE CRYPTO CRISIS</div>
+        
+        <!-- Links Container -->
+        <div class="links">
+            <a href="https://pump.fun/coin/BgV8qdfkjCDLPuDwhDaJGpgJj5XeYJeKwhG7E2bkpump" class="link" target="_blank" rel="noopener noreferrer">
+                <img src="https://pump.fun/logo.png" alt="PUMP" width="26" height="26">
+            </a>
+
+            <a href="https://x.com/CrisisCoin" class="link" target="_blank" rel="noopener noreferrer">
+                <img src="https://static.vecteezy.com/system/resources/previews/042/148/611/non_2x/new-twitter-x-logo-twitter-icon-x-social-media-icon-free-png.png" alt="X" width="26" height="26">
+            </a>
+            <a href="https://dexscreener.com/solana/5gv61eapfh5jcerjgxc3sazvamfeew2chcyj6jbpph3s" class="link" target="_blank" rel="noopener noreferrer">
+                <img src="https://solanaguides.com/wp-content/uploads/bullx_io_airdrop_guide.jpg" alt="DEX" width="26" height="26">
+            </a>
+            <a href="https://t.me/CryptoCrisisTG" class="link" target="_blank" rel="noopener noreferrer">
+                <img src="https://seeklogo.com/images/T/telegram-logo-2A32756393-seeklogo.com.png" alt="Telegram" width="26" height="26">
+            </a>
+        </div>
+
+        <!-- Copy Contract Address Button -->
+        <button id="copyCAButton" class="copy-btn" aria-label="Copy Contract Address" title="Copy Contract Address">
+            Copy Contract Address
+        </button>
+    </div>
+
+    <!-- Include script.js with version parameter to ensure no cache -->
+    <script src="script.js?v=1.0.2"></script>
+    
+    <!-- JavaScript for Copying the Contract Address -->
+    <script>
+        document.getElementById('copyCAButton').addEventListener('click', function() {
+            const contractAddress = '0x5F8F9F1e982edc233d1F1d3434A876c61c682A58'; // Replace with your actual contract address
+            navigator.clipboard.writeText(contractAddress).then(function() {
+                // Show a message or visual feedback indicating the copy was successful
+                alert('Contract Address Copied to Clipboard!');
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy contract address.');
+            });
+        });
+    </script>
+</body>
+</html>
